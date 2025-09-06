@@ -2,7 +2,10 @@ using Microsoft.EntityFrameworkCore;
 using Npgsql.EntityFrameworkCore.PostgreSQL;
 using Microsoft.AspNetCore.Identity;
 using dotnet_projects.Data;
+<<<<<<< HEAD
 using Microsoft.AspNetCore.Authentication.Cookies;
+=======
+>>>>>>> 767c2f9656b75a5d60357e27db48943363454024
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +14,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+<<<<<<< HEAD
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
@@ -20,6 +24,8 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.AccessDeniedPath = "/Auth/AccessDenied";
         options.ExpireTimeSpan = TimeSpan.FromHours(1);
     });
+=======
+>>>>>>> 767c2f9656b75a5d60357e27db48943363454024
     
 var app = builder.Build();
 
